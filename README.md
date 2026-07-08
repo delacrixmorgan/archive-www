@@ -1,10 +1,12 @@
 # 📚 Archive
 
+![home](/screenshots/home.png?raw=true "Home")
+
 **Build your own searchable archive** 🗃️
 
 Ever read something online — a piece of journalism, a bit of history, an essay — and worried it might quietly disappear one day? This is a little template for saving those articles as your own **searchable, taggable catalog**, published as a website for free.
 
-It's a **white-label template**, which just means: it comes plain on purpose. You fork it (make your own copy), drop in your articles, add your own name and colours, and it's yours. No design skills required. 💛
+Archive is a **white-label template**, which just means: it comes plain on purpose. You fork it (make your own copy), drop in your articles, add your own name and update the colours (if you'd like), and it's yours! No design skills required, just a minimal setup. 💛
 
 ---
 
@@ -66,6 +68,8 @@ npm run preview
 ---
 
 ## 📝 Adding an article
+
+![article](/screenshots/article.png?raw=true "Article")
 
 This is the whole workflow — it's genuinely just "create a text file." 📄
 
@@ -176,4 +180,6 @@ It's a template — please change it! 💅
 
 ## 📜 License
 
-This template is free and open source software, released under the **[GNU General Public License v3](LICENSE.md)**. In plain terms: you're free to use, change, and share it — just keep it under the same license so it stays free for everyone. 💛
+This template is free and open source software, released under the **[GNU General Public License v3](LICENSE.md)**. 
+
+In plain terms: you're free to use, change, and share it — just keep it under the same license so it stays free for everyone. 💛
