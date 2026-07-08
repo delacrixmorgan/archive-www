@@ -138,7 +138,7 @@ Ready to share your archive with the world? GitHub hosts it for free. 🥳
 2. In your repo, go to **Settings → Pages**, and under **Source** choose **GitHub Actions**.
 3. That's it! From now on, **every time you push a change to the `main` branch**, the site rebuilds and republishes automatically (thanks to the workflow already included in `.github/workflows/deploy.yml`).
 
-> 🔧 One small tweak: open [astro.config.mjs](astro.config.mjs) and change the `site` value to your own web address so links point to the right place.
+> 🔧 One small tweak: open [site.config.mjs](site.config.mjs) and set `repository` to your repo's name and `githubUser` to your GitHub username. This is what makes all the links point to the right place on GitHub Pages. (More on that file just below. 👇)
 
 ---
 
@@ -146,8 +146,32 @@ Ready to share your archive with the world? GitHub hosts it for free. 🥳
 
 It's a template — please change it! 💅
 
-- ✏️ The site's title, intro, and layout live in [src/pages/index.astro](src/pages/index.astro).
+### ⚙️ The one file to edit: `site.config.mjs`
+
+Everything that makes this archive *yours* — its name, tagline, and web address — lives in a single file at the top of the project: [site.config.mjs](site.config.mjs). Open it, change the four values, save. That's the whole setup. ✨
+
+```js
+export default {
+  name: 'Archive',
+  description: 'This is not a pipe',
+  repository: 'archive-www',
+  githubUser: 'delacrixmorgan',
+};
+```
+
+| Value | What it does |
+|-------|--------------|
+| `name` | Your archive's name — shown in the header, browser tab titles, and footer. |
+| `description` | A short tagline shown under the name — also used as the site's description for search engines. |
+| `repository` | Your GitHub repository's name → becomes the URL path (`…github.io/your-repo`). Must match the repo you publish to. |
+| `githubUser` | Your GitHub username → the web address your site is served from (`your-name.github.io`). |
+
+> 💡 You don't need to touch any code — just those four lines. Change one and it updates everywhere automatically the next time the site builds.
+
+### 🖌️ Going further (optional)
+
 - 🎨 The colours and styling live in the CSS files under `css/`.
+- 🧱 The page layout lives in [src/pages/index.astro](src/pages/index.astro) and [src/pages/[id].astro](src/pages/[id].astro).
 - 🙂 Everything is yours to rename, restyle, and rearrange.
 
 ---

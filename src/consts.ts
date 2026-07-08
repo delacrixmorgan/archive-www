@@ -1,4 +1,8 @@
-export const SITE_TITLE = 'Archive';
+import config from '../site.config.mjs';
+
+// Site identity — edit these in site.config.mjs, not here.
+export const SITE_TITLE = config.name;
+export const SITE_DESCRIPTION = config.description;
 
 // Prefix a path with the configured base (e.g. '/archive-www') so assets and
 // links resolve correctly when served from a GitHub Pages subpath. Joins with a

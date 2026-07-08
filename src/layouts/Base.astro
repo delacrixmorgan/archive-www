@@ -1,5 +1,5 @@
 ---
-import { SITE_TITLE, withBase } from '../consts';
+import { SITE_TITLE, SITE_DESCRIPTION, withBase } from '../consts';
 
 interface Props {
   title?: string;
@@ -13,7 +13,7 @@ const { title = SITE_TITLE } = Astro.props;
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A chronological evidence archive for researchers and historians.">
+  <meta name="description" content={SITE_DESCRIPTION}>
   <title>{title}</title>
   <link rel="icon" href={withBase('favicon.svg')} type="image/svg+xml">
   <link rel="icon" href={withBase('favicon.ico')} sizes="any">
