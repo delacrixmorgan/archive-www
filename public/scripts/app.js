@@ -177,6 +177,17 @@
     });
   });
 
+  // Clicking a tag pill inside a list row filters in-place, just like its chip.
+  listEl.addEventListener('click', e => {
+    const tagLink = e.target.closest('a.article-tag');
+    if (!tagLink || !listEl.contains(tagLink)) return;
+    e.preventDefault();
+    activeTag = tagLink.dataset.tag || 'all';
+    syncUrl();
+    applyFilters();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
   searchInput.addEventListener('input', () => { query = searchInput.value; syncUrl(); applyFilters(); });
   searchClear.addEventListener('click', () => { query = ''; searchInput.value = ''; searchInput.focus(); syncUrl(); applyFilters(); });
   nrReset.addEventListener('click', () => {

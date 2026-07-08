@@ -439,6 +439,16 @@ mark {
   color: var(--text-secondary);
 }
 
+a.article-tag {
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+a.article-tag:hover {
+  opacity: 0.85;
+}
+
 /* Tag color variants — light mode */
 [data-theme="light"] .article-tag.finance { background: #e8f5e9; color: #2e4e38; }
 [data-theme="light"] .article-tag.corruption { background: #fce4ec; color: #5d1a2a; }

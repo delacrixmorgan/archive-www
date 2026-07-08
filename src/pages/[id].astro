@@ -62,7 +62,9 @@ function getISODate(date: Date): string {
         <span class="article-meta-separator"></span>
         <div class="article-meta-tags">
           {article.data.tags.map(tag => (
-            <span class={`article-tag ${tag}`}>{tag.charAt(0).toUpperCase() + tag.slice(1)}</span>
+            <a class={`article-tag ${tag}`} href={`${withBase()}?tag=${encodeURIComponent(tag)}`}>
+              {tag.charAt(0).toUpperCase() + tag.slice(1)}
+            </a>
           ))}
         </div>
       </div>
